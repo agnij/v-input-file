@@ -1,0 +1,37 @@
+{
+  "id": "1846485",
+  "name": "input-file",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "689296",
+      "name": "添加 加号 无边框",
+      "font_class": "tianjiajiahaowubiankuang",
+      "unicode": "e81a",
+      "unicode_decimal": 59418
+    },
+    {
+      "icon_id": "880298",
+      "name": "文件",
+      "font_class": "wenjiandocuments18",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "8172206",
+      "name": "删除",
+      "font_class": "shanchu",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "9709594",
+      "name": "上传",
+      "font_class": "shangchuan",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "v-input-file",
+  "version": "0.5.0",
+  "description": "原生input的文件上传以及上传文件列表展示",
+  "main": "lib/vinputFile.umd.min.js",
+  "keywords": ["vinputFile","v-input-file","input-file","vue"],
+  "author": "agnij",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vinputFile --dest lib packages/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ynqc/toast.git"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.3.0",
+    "@vue/cli-plugin-eslint": "^4.3.0",
+    "@vue/cli-service": "^4.3.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
