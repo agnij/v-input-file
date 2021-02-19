@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input-file v-model="fileList" :multiple="false"></input-file>
+    <input-file v-model="fileList" :multiple="false" :btnColor="btnColor"></input-file>
   </div>
 </template>
 
@@ -9,7 +9,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      fileList: []
+      fileList: [],
+      btnColor: '#409eff'
     }
   }
 }

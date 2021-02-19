@@ -23,6 +23,7 @@
 | :-----| ----: | :----: | :--------: |
 | multiple | Boolean | false | Whether to support multi file upload? Currently, only false can be passed |
 | fileList | Array | [] |
+| btnColor | String | '#409eff' | btn's background color |
 
 
 ## Events

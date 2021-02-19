@@ -1,19 +1,27 @@
 <template>
   <div class="file-wrap">
-    <div class="input-wrap">
+    <div class="input-wrap" :style="{'background-color': btnColor}">
       <span class="iconfont">&#xe613;</span>
       <span>上传文件</span>
-      <input type="file" class="file-input" @change="getFile" :multiple="multiple" />
+      <input
+        type="file"
+        class="file-input"
+        @change="getFile"
+        :multiple="multiple"
+      />
     </div>
     <!-- 文件列表 start -->
-    <ul class="file-list" v-if="fileList.length&&fileList">
+    <ul class="file-list" v-if="fileList.length && fileList">
       <li v-for="item in fileList" :key="item.id">
         <div class="left">
-          <span class="iconfont">&#xe611;</span>
-          <span class="title">{{item.name}}</span>
-        </div>
-        <div class="right" @click="fileList.splice(0);" @input="$emit('input',fileList)">
-          <span class="iconfont">&#xe658;</span>
+          <div class="iconfont">&#xe611;</div>
+          <div class="title">{{ item.name }}</div>
+          <div
+            class="iconfont del"
+            @click="fileList.splice(0)"
+            @input="$emit('input', fileList)"
+            >&#xe658;</div
+          >
         </div>
       </li>
     </ul>
@@ -23,7 +31,7 @@
 <script>
 export default {
   name: 'input-file',
-  data() {
+  data () {
     return {
       fileList: []
     }
@@ -37,18 +45,22 @@ export default {
     },
     fileArr: {
       type: Array
+    },
+    btnColor: {
+      type: String,
+      default: '#409eff'
     }
   },
   watch: {
     value: {
       immediate: true,
-      handler(val) {
+      handler (val) {
         this.fileList = val || []
       }
     }
   },
   methods: {
-    getFile(file) {
+    getFile (file) {
       this.$emit('input', [file.target.files[0]])
     }
   }
@@ -60,9 +72,9 @@ export default {
   .input-wrap {
     position: relative;
     color: #fff;
-    background-color: #409eff;
     width: 100px;
     line-height: 32px;
+    border-radius: 3px;
     cursor: pointer;
     .file-input {
       position: absolute;
@@ -86,20 +98,22 @@ export default {
       display: flex;
       justify-content: space-between;
       .left {
-        span {
-          padding: 0 5px;
+        width: 100%;
+        display: flex;
+        .iconfont {
+          width: 5%;
         }
         .title {
+          width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: left;
           color: rgb(175, 175, 175);
         }
-      }
-      .right {
-        cursor: pointer;
-        span {
-          padding: 0 10px;
-        }
-        .size {
-          color: #ccc;
+        .del {
+          width: 5%;
+          cursor: pointer;
         }
       }
     }
